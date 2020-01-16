@@ -4,6 +4,8 @@
 
 ## Python
 
-* [Mac下保持程序不被干掉](https://github.com/luxuze/luxuze.github.io/blob/master/blog/mac_keep_aliving_python_process.md)
+* [Mac下保持程序不被干掉](./md/py/mac_keep_aliving_python_process.md)
 
 ## TypeScript
+
+## DataBase
