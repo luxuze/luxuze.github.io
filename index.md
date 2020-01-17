@@ -9,3 +9,7 @@
 ## TypeScript
 
 ## DataBase
+
+### Redis
+
+* [Redis Sentinel (哨兵)](./md/db/redis/sentinel.md)
