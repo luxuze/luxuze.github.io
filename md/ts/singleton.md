@@ -8,7 +8,7 @@ class Singleton {
 
   constructor(sp:{}) {
     if (Singleton.instance) return Singleton.instance;
-    this.someprops = sp
+    this.someprops = sp;
     Singleton.instance = this;
   }
   someprops:{};
