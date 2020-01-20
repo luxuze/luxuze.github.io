@@ -36,4 +36,4 @@
 
 ### Api Gateway
 
-* Kong
+* [Kong](./md/ms/kong.md)
