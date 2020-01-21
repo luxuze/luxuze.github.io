@@ -12,6 +12,7 @@
 ## TypeScript
 
 * [ts singleton 单例模式](./md/ts/singleton.md)
+* [UmiJS 可插拔的企业级 react 应用框架](https://umijs.org/zh/)
 
 ## DataBase
 
@@ -20,6 +21,8 @@
 * [Redis Sentinel (哨兵)](./md/db/redis/sentinel.md)
 
 ### MySQL
+
+* [mysql 主从](./md/db/mysql/msater_slave.md)
 
 ### PostgresQL
 
@@ -37,6 +40,8 @@
 * ### [Api Gateway Kong](./md/ms/kong.md)
 
 * ### [Prometheus & grafana](./md/ms/prometheus.md)
+
+* ### [KubeMQ](https://kubemq.io/quick-start/)
 
 ## Cloud Service
 
