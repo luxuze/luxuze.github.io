@@ -1,4 +1,4 @@
-# luxuze.github.io
+# [Redirect To My GitHub](https://github.com/luxuze)
 
 ## Golang
 
