@@ -1,1 +1,1 @@
-# Nocoding Nobugs.
+# [Nocoding Nobugs.](https://luxuze.github.io)
