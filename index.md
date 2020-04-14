@@ -36,8 +36,8 @@
 
 ## Git
 
-* [一站式思维导图](./md/git/git.jpeg)
-* [A Better Git Log](./md/git/better_git_log.md)
+* [一站式思维导图](./md/git/git_cmd.md)
+* [A Better Git Log](https://coderwall.com/p/euwpig/a-better-git-log )
 
 ## Linux
 
