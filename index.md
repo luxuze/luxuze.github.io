@@ -16,6 +16,9 @@
 
 ## TypeScript
 
+* [前端综合](./md/ts/question.md)
+* [JavaScript](./md/ts/question-js.md)
+* [CSS](./md/ts/question-css.md)
 * [ts singleton 单例模式](./md/ts/singleton.md)
 * [UmiJS 可插拔的企业级 react 应用框架](https://umijs.org/zh/)
 * [Typescript: difference between String and string](./md/ts/String&string.md)
