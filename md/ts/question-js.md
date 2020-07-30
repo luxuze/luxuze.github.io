@@ -323,3 +323,25 @@ console.log(Array.isArray(b)); //false
 ## Vue的双向绑定数据的原理
 
 1. vue.js 则是采用数据劫持结合发布者-订阅者模式的方式，通过Object.defineProperty()来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调
+
+## TypeScript Singleton 单例模式
+
+[Stack Over Flow Link](https://stackoverflow.com/questions/30174078/how-to-define-singleton-in-typescript)
+
+```typescript
+class Singleton {
+  //Assign "new Singleton()" here to avoid lazy initialisation
+  private static instance: Singleton;
+
+  constructor(sp:{}) {
+    if (Singleton.instance) return Singleton.instance;
+    this.someprops = sp;
+    Singleton.instance = this;
+  }
+  someprops:{};
+}
+```
+
+## typescript string/String
+
+1. [Typescript: difference between String and string](https://stackoverflow.com/questions/14727044/typescript-difference-between-string-and-string)
