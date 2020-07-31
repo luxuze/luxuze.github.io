@@ -7,29 +7,29 @@
 
 ## Golang
 
-* [Gin](./md/go/gin.md)
+* [Gin](./md/golang/gin.md)
 
 ## Python
 
-* [一站式思维导图](./md/py/py3.png)
-* [Mac下保持程序不被干掉](./md/py/mac_keep_aliving_python_process.md)
+* [一站式思维导图](./md/python/py3.png)
+* [Mac下保持程序不被干掉](./md/python/mac_keep_aliving_python_process.md)
 
-## TypeScript
+## Frontend
 
-* [前端综合](./md/ts/question.md)
-* [JavaScript](./md/ts/question-js.md)
-* [CSS](./md/ts/question-css.md)
+* [前端综合](./md/frontend/question.md)
+* [JavaScript](./md/frontend/question-js.md)
+* [CSS](./md/frontend/question-css.md)
 * [UmiJS 可插拔的企业级 react 应用框架](https://umijs.org/zh/)
 
 ## DataBase
 
 ### Redis
 
-* [Redis Sentinel (哨兵)](./md/db/redis/sentinel.md)
+* [Redis Sentinel (哨兵)](./md/database/redis/sentinel.md)
 
 ### MySQL
 
-* [mysql 主从](./md/db/mysql/msater_slave.md)
+* [mysql 主从](./md/database/mysql/msater_slave.md)
 
 ### PostgresQL
 
