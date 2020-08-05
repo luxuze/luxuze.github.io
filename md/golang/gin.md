@@ -1,4 +1,5 @@
 # 将 request body 绑定到不同的结构体中
+
 ```go
 func SomeHandler(c *gin.Context) {
   objA := formA{}
