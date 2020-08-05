@@ -131,18 +131,18 @@ function Parent(){
 
 ```javascript
 var module1 = (function(){
-　　　　var _count = 0;
-　　　　var m1 = function(){
-　　　　　　//...
-　　　　};
-　　　　var m2 = function(){
-　　　　　　//...
-　　　　};
-　　　　return {
-　　　　　　m1 : m1,
-　　　　　　m2 : m2
-　　　　};
-　　})();
+    var _count = 0;
+    var m1 = function(){
+    //...
+    };
+    var m2 = function(){
+        //...
+    };
+    return {
+        m1 : m1,
+        m2 : m2
+    };
+})();
 ```
 
 ## 那些操作会造成内存泄漏
