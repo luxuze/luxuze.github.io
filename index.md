@@ -1,4 +1,4 @@
-# [Redirect To My GitHub](https://github.com/luxuze)
+# luxuze.github.io
 
 ## HTTP & HTTPS
 
