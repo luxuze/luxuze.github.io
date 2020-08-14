@@ -75,7 +75,7 @@ func main() {
 
 ## 说说go语言的channel特性
 
-1. 给一个 nil channel 发送数据，造成永远阻塞
+1. 给一个 nil channel 发送数据，造成 fatal error: all goroutines are asleep - deadlock!
 1. 从一个 nil channel 接收数据，造成永远阻塞
 1. 给一个已经关闭的 channel 发送数据，引起 panic
 1. 从一个已经关闭的 channel 接收数据，如果缓冲区中为空，则返回一个零值
