@@ -13,7 +13,7 @@
 ## Python
 
 - [一站式思维导图](./md/python/py3.png)
-- [Mac下保持程序不被干掉](./md/python/mac_keep_aliving_python_process.md)
+- [Mac 下保持程序不被干掉](./md/python/mac_keep_aliving_python_process.md)
 
 ## Frontend
 
@@ -21,7 +21,7 @@
 - [JavaScript](./md/frontend/question-js.md)
 - [CSS](./md/frontend/question-css.md)
 - [UmiJS 可插拔的企业级 react 应用框架](https://umijs.org/zh/)
-- [轻松理解JS中的面向对象，顺便搞懂prototype和__proto__](./md/frontend/proto.md)
+- [轻松理解 JS 中的面向对象，顺便搞懂 prototype 和**proto**](./md/frontend/proto.md)
 
 ## DataBase
 
@@ -33,16 +33,18 @@
 
 - [mysql 主从](./md/database/mysql/msater_slave.md)
 
-### PostgresQL
+### PostgreSQL
 
 ### MongoDB
 
 ## Git
 
 - [一站式思维导图](./md/git/git_cmd.md)
-- [A Better Git Log](https://coderwall.com/p/euwpig/a-better-git-log )
+- [A Better Git Log](https://coderwall.com/p/euwpig/a-better-git-log)
 
 ## Linux
+
+- [crontab](./md/linux/crontab.md)
 
 ## Micro Service
 
