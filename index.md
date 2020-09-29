@@ -48,13 +48,13 @@
 
 ## Micro Service
 
-- ### [Api Gateway Kong](./md/ms/kong.md)
+- [Api Gateway Kong](./md/ms/kong.md)
 
-- ### [Prometheus & grafana](./md/ms/prometheus.md)
+- [Prometheus & grafana](./md/ms/prometheus.md)
 
-- ### [KubeMQ](https://kubemq.io/quick-start/)
+- [KubeMQ](https://kubemq.io/quick-start/)
 
-- ### Go micro
+- Go micro
 
   - [Service Account kubernetes rbac config](./md/micro/go-micro-sa.md)
 
