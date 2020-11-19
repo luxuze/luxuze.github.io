@@ -9,6 +9,7 @@
 
 - [基础](./md/golang/grammar.md)
 - [Gin](./md/golang/gin.md)
+- [http服务优雅重启](./md/golang/restart.md)
 
 ## Python
 
