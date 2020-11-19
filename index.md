@@ -48,10 +48,9 @@
 
 ## Micro Service
 
-- [Api Gateway Kong](./md/ms/kong.md)
-
-- [Prometheus & grafana](./md/ms/prometheus.md)
-
+- [CAP](./md/micro/cap.md)
+- [Api Gateway Kong](./md/micro/kong.md)
+- [Prometheus & grafana](./md/micro/prometheus.md)
 - [KubeMQ](https://kubemq.io/quick-start/)
 
 - Go micro
