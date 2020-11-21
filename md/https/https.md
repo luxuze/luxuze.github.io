@@ -10,7 +10,7 @@
 
 - HTTPS其实就是将HTTP的数据包再通过SSL/TLS加密后传输
 
-![https 通信流程](./https.png "HTTPS (HyperText Transfer Protocol Secure)")
+![https 通信流程](https://monaco-cdn.oss-cn-shanghai.aliyuncs.com/3d912e6cf66ee11bcaabffe85fb8d1ed.png "HTTPS (HyperText Transfer Protocol Secure)")
 
 1. 用户在浏览器发起HTTPS请求（如 <https://www.google.com/>），默认使用服务端的443端口进行连接;
 2. HTTPS需要使用一套CA数字证书，证书内会附带一个公钥Pub，而与之对应的私钥Private保留在服务端不公开;
@@ -24,7 +24,7 @@
 
 ### https中间人攻击(Man-in-the-middle attack, MITM)
 
-![中间人攻击](./mitm.png "中间人攻击(Man-in-the-middle attack, MITM)")
+![中间人攻击](https://monaco-cdn.oss-cn-shanghai.aliyuncs.com/a0d8b344adf8ab5ca2bdbeb15fb8d238.png "中间人攻击(Man-in-the-middle attack, MITM)")
 
 1. 服务端有非对称加密的公钥A1，私钥A2;
 2. 客户端发起请求，服务端将公钥A1返回给客户端;
