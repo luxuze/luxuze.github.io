@@ -1,3 +1,3 @@
-module leet-code
+module github.com/luxuze.github.io/leetcode
 
-go 1.13
+go 1.15
