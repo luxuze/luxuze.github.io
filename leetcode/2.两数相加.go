@@ -10,11 +10,6 @@ package leetcode
  * [2] 两数相加
  */
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
 // @lc code=start
 /**
  * Definition for singly-linked list.

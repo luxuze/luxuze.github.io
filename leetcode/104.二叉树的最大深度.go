@@ -4,12 +4,6 @@ package leetcode
 // Your runtime beats 92.34 % of golang submissions
 // Your memory usage beats 16.67 % of golang submissions (4.5 MB)
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
 /*
  * @lc app=leetcode.cn id=104 lang=golang
  *
