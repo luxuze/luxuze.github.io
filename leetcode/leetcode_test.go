@@ -5,5 +5,5 @@ import (
 )
 
 func TestLeetcode(t *testing.T) {
-	t.Log(twoSum([]int{2, 1, 3, 4}, 5))
+	t.Log(addStrings("119", "199"))
 }
