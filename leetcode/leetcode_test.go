@@ -5,5 +5,5 @@ import (
 )
 
 func TestLeetcode(t *testing.T) {
-	t.Log(isAnagram("abc", "cba"))
+	t.Log(detectCapitalUse("Google"))
 }
