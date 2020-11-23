@@ -6,5 +6,5 @@ import (
 
 func TestLeetcode(t *testing.T) {
 	// t.Log(longestCommonPrefix([]string{"baac", "acb", "bacc", "cb"}))
-	t.Log(longestCommonPrefix([]string{"abc", "acb", "a"}))
+	t.Log(longestCommonPrefix([]string{"abc", "acb", "c"}))
 }

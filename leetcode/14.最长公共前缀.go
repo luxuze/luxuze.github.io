@@ -58,9 +58,6 @@ func longestCommonPrefix(strs []string) string {
 			maxLength = l
 		}
 	}
-	if maxLength == 0 {
-		return ""
-	}
 	result := make([]byte, maxLength)
 	for i := 0; i < maxLength; i++ {
 		current := strs[0][i]
