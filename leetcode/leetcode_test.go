@@ -5,5 +5,6 @@ import (
 )
 
 func TestLeetcode(t *testing.T) {
-	t.Log(findMinArrowShots([][]int{{1, 2}, {3, 4}, {2, 3}}))
+	// t.Log(longestCommonPrefix([]string{"baac", "acb", "bacc", "cb"}))
+	t.Log(longestCommonPrefix([]string{"abc", "acb", "a"}))
 }
