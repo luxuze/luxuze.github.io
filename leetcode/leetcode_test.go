@@ -5,5 +5,5 @@ import (
 )
 
 func TestLeetcode(t *testing.T) {
-	t.Log(addStrings("119", "199"))
+	t.Log(findMinArrowShots([][]int{{1, 2}, {3, 4}, {2, 3}}))
 }
