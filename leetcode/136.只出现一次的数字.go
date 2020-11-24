@@ -1,5 +1,8 @@
 package leetcode
 
+// 61/61 cases passed (16 ms)
+// Your runtime beats 57.76 % of golang submissions
+// Your memory usage beats 13.39 % of golang submissions (6.1 MB)
 /*
  * @lc app=leetcode.cn id=136 lang=golang
  *
@@ -35,8 +38,11 @@ package leetcode
  */
 
 // @lc code=start
-func singleNumber(nums []int) int {
-	return 0
+func singleNumber(nums []int) (r int) {
+	for i := range nums {
+		r ^= nums[i]
+	}
+	return r
 }
 
 // @lc code=end
