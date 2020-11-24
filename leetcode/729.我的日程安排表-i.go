@@ -60,7 +60,7 @@ type MyCalendar struct {
 	Calendar []myCalendarItem
 }
 
-func Constructor() MyCalendar {
+func MyCalendar_Constructor() MyCalendar {
 	return MyCalendar{}
 }
 

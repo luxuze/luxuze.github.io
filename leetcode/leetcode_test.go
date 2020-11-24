@@ -15,7 +15,5 @@ var tree = &TreeNode{
 }
 
 func TestLeetcode(t *testing.T) {
-	trie := Trie_Constructor()
-	trie.Insert("apple")
-	t.Log(trie)
+	t.Log(checkPossibility([]int{1, 4, 1, 2}))
 }
