@@ -1,8 +1,8 @@
 package leetcode
 
-// 18/18 cases passed (24 ms)
-// Your runtime beats 21.29 % of golang submissions
-// Your memory usage beats 44.32 % of golang submissions (7.1 MB)
+// 18/18 cases passed (20 ms)
+// Your runtime beats 69.47 % of golang submissions
+// Your memory usage beats 20.45 % of golang submissions (7.1 MB)
 /*
  * @lc app=leetcode.cn id=222 lang=golang
  *
@@ -48,14 +48,10 @@ package leetcode
  *     Right *TreeNode
  * }
  */
-func countNodes(root *TreeNode) int {
+func countNodes(root *TreeNode) (sum int) {
 	if root == nil {
 		return 0
 	}
-	if root.Left == nil && root.Right == nil {
-		return 1
-	}
-	var sum int
 	var dfs func(root *TreeNode)
 
 	dfs = func(root *TreeNode) {
@@ -69,7 +65,7 @@ func countNodes(root *TreeNode) int {
 	}
 	dfs(root)
 
-	return sum
+	return
 }
 
 // @lc code=end
