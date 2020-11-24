@@ -81,7 +81,7 @@ type LRUCache struct {
 	M map[int]int
 }
 
-func Constructor(capacity int) LRUCache {
+func LRUCache_Constructor(capacity int) LRUCache {
 	return LRUCache{
 		S: make([]int, capacity),
 		M: make(map[int]int, capacity),
