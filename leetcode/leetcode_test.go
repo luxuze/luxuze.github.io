@@ -15,5 +15,5 @@ var tree = &TreeNode{
 }
 
 func TestLeetcode(t *testing.T) {
-	t.Log(findBottomLeftValue(tree))
+	t.Log(countNodes(tree))
 }
