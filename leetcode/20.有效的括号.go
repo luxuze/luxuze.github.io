@@ -21,14 +21,13 @@ package leetcode
 // 	return isValid(re.ReplaceAllString(s, ""))
 // }
 
-var mp = map[byte]byte{
-	'(': ')',
-	'{': '}',
-	'[': ']',
-}
-
 func isValid(s string) bool {
 	var stack []byte
+	var mp = map[byte]byte{
+		'(': ')',
+		'{': '}',
+		'[': ']',
+	}
 	for i := range s {
 		if s[i] == '(' || s[i] == '{' || s[i] == '[' {
 			stack = append(stack, s[i])

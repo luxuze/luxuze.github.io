@@ -11,21 +11,23 @@ package leetcode
 
 // @lc code=start
 func generateParenthesis(n int) (result []string) {
+	var dfs func(left int, right int, path string, result *[]string)
+
+	dfs = func(left int, right int, path string, result *[]string) {
+		if left == 0 && right == 0 {
+			*result = append(*result, path)
+			return
+		}
+		if left > 0 {
+			dfs(left-1, right, path+"(", result)
+		}
+		if right > left {
+			dfs(left, right-1, path+")", result)
+		}
+	}
+
 	dfs(n, n, "", &result)
 	return
-}
-
-func dfs(left int, right int, path string, result *[]string) {
-	if left == 0 && right == 0 {
-		*result = append(*result, path)
-		return
-	}
-	if left > 0 {
-		dfs(left-1, right, path+"(", result)
-	}
-	if right > left {
-		dfs(left, right-1, path+")", result)
-	}
 }
 
 // @lc code=end
