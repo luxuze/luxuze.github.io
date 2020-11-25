@@ -43,9 +43,47 @@ def disk():
     for _ in range(int(num)):
         disk_list.append(input("请输入磁盘大小:"))
 
-    return sorted(disk_list, key=lambda x:check_disk(x))
+    for d in sorted(disk_list, key=lambda x:check_disk(x)):
+        print(d)
+
+def solution():
+    def intervalIntersection(A, B):
+        if A[0] > B[0]:
+            A, B = B, A
+        if A[1] < B[0]:
+            return None
+        return [B[0], min(A[1], B[1])]
+
+    def merge(intervals):
+        if not intervals:
+            return []
+        stack=[]
+        n=len(intervals)
+        intervals.sort()
+        for i,interval in enumerate(intervals):
+            left,right=interval
+            if stack and stack[-1][1]>=left:
+                stack[-1][1]=max(stack[-1][1],right)
+            else:
+                stack.append(interval)
+        return stack
+
+
+    l = [[0,3], [1,3], [3,5], [3,6]] #这里是输入的值
+    ans = []
+
+    for i in range(len(l)):
+        for j in range(len(l)):
+            if j <= i:
+                continue
+            ans.append(intervalIntersection(l[i], l[j]))
+    print(merge(ans))
 
 if __name__ == "__main__":
-    print(removeLess("aabcc"))
-    print(disk())
+    # print(removeLess("aabcc"))
+    # print(disk())
 
+    # print(
+    #     intervalIntersection([1,2], [2,9])
+    #     )
+    solution()
