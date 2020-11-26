@@ -5,18 +5,30 @@ import (
 )
 
 var tree = &TreeNode{
-	Val: 1,
+	Val: 3,
 	Left: &TreeNode{
-		Val: 2,
+		Val: 9,
+		Left: &TreeNode{
+			Val: 21,
+			Left: &TreeNode{
+				Val: 21,
+			},
+			// Right: &TreeNode{
+			// 	Val: 8,
+			// },
+		},
+		Right: &TreeNode{
+			Val: 8,
+		},
 	},
 	Right: &TreeNode{
-		Val: 3,
+		Val: 20,
+		Left: &TreeNode{
+			Val: 15,
+		},
 	},
 }
 
 func TestLeetcode(t *testing.T) {
-	t.Log(merge([][]int{{1, 4}, {2, 3}}))
-	// t.Log(merge([][]int{{1, 3}, {2, 4}}))
-	// t.Log(merge([][]int{{1, 2}, {2, 3}, {5, 6}}))
-	// t.Log(merge([][]int{{1, 3}, {2, 6}, {8, 10}, {15, 18}}))
+	t.Log(isBalanced(tree))
 }
