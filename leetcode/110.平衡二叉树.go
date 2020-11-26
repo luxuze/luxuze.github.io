@@ -73,7 +73,7 @@ func isBalanced(root *TreeNode) bool {
 	if root == nil {
 		return true
 	}
-	if isBalanced_Abs(isBalanced_MaxDepth(root.Left)-isBalanced_MaxDepth(root.Right)) > 1 ||
+	if lc110_Abs(lc110_MaxDepth(root.Left)-lc110_MaxDepth(root.Right)) > 1 ||
 		!isBalanced(root.Left) ||
 		!isBalanced(root.Right) {
 		return false
@@ -82,20 +82,20 @@ func isBalanced(root *TreeNode) bool {
 	return true
 }
 
-func isBalanced_MaxDepth(tn *TreeNode) int {
+func lc110_MaxDepth(tn *TreeNode) int {
 	if tn == nil {
 		return 0
 	}
-	return isBalanced_Max(isBalanced_MaxDepth(tn.Left), isBalanced_MaxDepth(tn.Right)) + 1
+	return lc110_Max(lc110_MaxDepth(tn.Left), lc110_MaxDepth(tn.Right)) + 1
 }
 
-func isBalanced_Max(a, b int) int {
+func lc110_Max(a, b int) int {
 	if a > b {
 		return a
 	}
 	return b
 }
-func isBalanced_Abs(a int) int {
+func lc110_Abs(a int) int {
 	if a > 0 {
 		return a
 	}
