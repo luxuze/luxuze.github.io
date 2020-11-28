@@ -30,5 +30,6 @@ var tree = &TreeNode{
 }
 
 func TestLeetcode(t *testing.T) {
-	t.Log(search([]int{-1, 0, 3, 5, 9, 12}, 9))
+	t.Log()
+	reverseString([]byte{'h', 'e', 'l', 'l', 'o'})
 }
