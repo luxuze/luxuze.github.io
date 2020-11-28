@@ -30,5 +30,5 @@ var tree = &TreeNode{
 }
 
 func TestLeetcode(t *testing.T) {
-	t.Log(addBinary("1111", "1111"))
+	t.Log(search([]int{-1, 0, 3, 5, 9, 12}, 9))
 }
