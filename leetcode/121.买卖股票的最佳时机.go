@@ -44,7 +44,7 @@ package leetcode
  */
 
 // @lc code=start
-func maxProfit(prices []int) (answer int) {
+func maxProfit1(prices []int) (answer int) {
 	for i := range prices {
 		for j := i; j < len(prices); j++ {
 			if prices[j]-prices[i] > answer {
