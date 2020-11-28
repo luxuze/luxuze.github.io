@@ -30,5 +30,5 @@ var tree = &TreeNode{
 }
 
 func TestLeetcode(t *testing.T) {
-	t.Log(isBalanced(tree))
+	t.Log(generate(5))
 }
