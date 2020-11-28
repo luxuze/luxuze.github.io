@@ -30,5 +30,5 @@ var tree = &TreeNode{
 }
 
 func TestLeetcode(t *testing.T) {
-	t.Log(generate(5))
+	t.Log(addBinary("1111", "1111"))
 }
