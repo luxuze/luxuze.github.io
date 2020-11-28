@@ -12,3 +12,9 @@ type TreeNode struct {
 	Left  *TreeNode
 	Right *TreeNode
 }
+
+// Node N叉树
+type Node struct {
+	Val      int
+	Children []*Node
+}
