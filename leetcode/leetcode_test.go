@@ -5,31 +5,24 @@ import (
 )
 
 var tree = &TreeNode{
-	Val: 3,
+	Val: 1,
 	Left: &TreeNode{
-		Val: 9,
-		Left: &TreeNode{
-			Val: 21,
-			Left: &TreeNode{
-				Val: 21,
-			},
-			// Right: &TreeNode{
-			// 	Val: 8,
-			// },
-		},
-		Right: &TreeNode{
-			Val: 8,
-		},
+		Val: 2,
 	},
 	Right: &TreeNode{
-		Val: 20,
+		Val: 3,
 		Left: &TreeNode{
-			Val: 15,
+			Val: 4,
+		},
+		Right: &TreeNode{
+			Val: 5,
 		},
 	},
 }
 
 func TestLeetcode(t *testing.T) {
-	t.Log()
-	reverseString([]byte{'h', 'e', 'l', 'l', 'o'})
+	c := Constructor()
+	t.Log(
+		c.serialize(tree),
+	)
 }
