@@ -5,23 +5,23 @@ import (
 )
 
 var tree = &TreeNode{
-	Val: 10,
+	Val: 1,
 	Left: &TreeNode{
-		Val: 5,
+		Val: 2,
 	},
 	Right: &TreeNode{
-		Val: 15,
+		Val: 3,
 		Left: &TreeNode{
 			Val: 6,
 		},
 		Right: &TreeNode{
-			Val: 20,
+			Val: 7,
 		},
 	},
 }
 
 func TestLeetcode(t *testing.T) {
-	t.Log(
-		isValidBST(tree),
-	)
+	t.Log(Serialize(tree))
+	tn := Deserialize(Serialize(tree))
+	t.Log(Serialize(tn))
 }

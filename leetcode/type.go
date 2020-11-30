@@ -27,28 +27,57 @@ type Node struct {
 
 // Serialize Serializes a tree to a single string.
 func Serialize(root *TreeNode) string {
-	if root == nil {
-		return "null"
+	var (
+		answer string
+		layers = []*TreeNode{root}
+	)
+
+	for layers != nil {
+		var temp []*TreeNode
+		for i := range layers {
+			if layers[i] == nil {
+				answer = fmt.Sprintf("%s,null", answer)
+				continue
+			}
+			answer = fmt.Sprintf("%s,%d", answer, layers[i].Val)
+			temp = append(temp, layers[i].Left, layers[i].Right)
+		}
+		layers = temp
 	}
-	return fmt.Sprintf("%d,%s,%s",
-		root.Val, Serialize(root.Left), Serialize(root.Right))
+
+	return answer[1:]
 }
 
 // Deserialize Deserialize your encoded data to tree.
 func Deserialize(data string) *TreeNode {
-	var dfs func(*[]string) *TreeNode
-	dfs = func(l *[]string) *TreeNode {
-		rootVal := (*l)[0]
-		*l = (*l)[1:]
-		if rootVal == "null" {
-			return nil
+	var (
+		atoiTreeNode = func(s string) *TreeNode {
+			if s == "null" {
+				return nil
+			}
+			i, _ := strconv.Atoi(s)
+			return &TreeNode{Val: i}
 		}
-		val, _ := strconv.Atoi(rootVal)
-		root := &TreeNode{Val: val}
-		root.Left = dfs(l)
-		root.Right = dfs(l)
-		return root
+
+		list   = strings.Split(data, ",")
+		root   = atoiTreeNode(list[0])
+		tnList = []*TreeNode{root}
+	)
+
+	list = list[1:]
+
+	for len(list) > 0 {
+		tnList[0].Left = atoiTreeNode(list[0])
+		tnList[0].Right = atoiTreeNode(list[1])
+		if tnList[0].Left != nil {
+			tnList = append(tnList, tnList[0].Left)
+		}
+		if tnList[0].Right != nil {
+			tnList = append(tnList, tnList[0].Right)
+		}
+		list = list[2:]
+		tnList = tnList[1:]
 	}
-	l := strings.Split(data, ",")
-	return dfs(&l)
+
+	return root
 }
