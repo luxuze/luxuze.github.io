@@ -1,7 +1,11 @@
 package leetcode
 
+// 50/50 cases passed (16 ms)
+// Your runtime beats 61.88 % of golang submissions
+// Your memory usage beats 55.08 % of golang submissions (7.4 MB)
 import (
 	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -55,9 +59,7 @@ import (
  * }
  */
 
-type Codec struct {
-	L []string
-}
+type Codec struct{}
 
 func Constructor() Codec {
 	return Codec{}
@@ -73,8 +75,21 @@ func (this *Codec) serialize(root *TreeNode) string {
 
 // Deserializes your encoded data to tree.
 func (this *Codec) deserialize(data string) *TreeNode {
-	this.L = strings.Split(data, ",")
-	return &TreeNode{}
+	l := strings.Split(data, ",")
+	return this.buildTree(&l)
+}
+
+func (this *Codec) buildTree(l *[]string) *TreeNode {
+	rootVal := (*l)[0]
+	*l = (*l)[1:]
+	if rootVal == "null" {
+		return nil
+	}
+	val, _ := strconv.Atoi(rootVal)
+	root := &TreeNode{Val: val}
+	root.Left = this.buildTree(l)
+	root.Right = this.buildTree(l)
+	return root
 }
 
 /**

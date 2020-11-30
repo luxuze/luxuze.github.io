@@ -25,4 +25,7 @@ func TestLeetcode(t *testing.T) {
 	t.Log(
 		c.serialize(tree),
 	)
+	t.Log(
+		c.deserialize("1,2,null,null,3,4,null,null,5,null,null"),
+	)
 }
