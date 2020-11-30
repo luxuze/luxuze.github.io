@@ -21,11 +21,10 @@ var tree = &TreeNode{
 }
 
 func TestLeetcode(t *testing.T) {
-	c := Constructor()
 	t.Log(
-		c.serialize(tree),
+		Serialize(tree),
 	)
 	t.Log(
-		c.deserialize("1,2,null,null,3,4,null,null,5,null,null"),
+		Deserialize("1,2,null,null,3,4,null,null,5,null,null"),
 	)
 }
