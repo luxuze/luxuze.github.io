@@ -4,22 +4,7 @@ import (
 	"testing"
 )
 
-var tree = &TreeNode{
-	Val: 1,
-	Left: &TreeNode{
-		Val: 2,
-	},
-	Right: &TreeNode{
-		Val: 3,
-		Left: &TreeNode{
-			Val: 6,
-		},
-		Right: &TreeNode{
-			Val: 7,
-		},
-	},
-}
-
 func TestLeetcode(t *testing.T) {
-	t.Log(isPowerOfTwo(5))
+	tree := Deserialize("71,62,84,14,null,null,88,null,null,null,null")
+	t.Log(minDiffInBST(tree))
 }
