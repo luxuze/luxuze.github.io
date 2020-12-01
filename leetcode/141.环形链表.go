@@ -1,5 +1,8 @@
 package leetcode
 
+// 17/17 cases passed (4 ms)
+// Your runtime beats 98.35 % of golang submissions
+// Your memory usage beats 67.45 % of golang submissions (3.6 MB)
 // 17/17 cases passed (0 ms)
 // Your runtime beats 100 % of golang submissions
 // Your memory usage beats 5.28 % of golang submissions (6 MB)
@@ -81,14 +84,27 @@ package leetcode
  *     Next *ListNode
  * }
  */
+// func hasCycle(head *ListNode) bool {
+// 	mp := make(map[*ListNode]int)
+// 	for head != nil {
+// 		if _, ok := mp[head]; ok {
+// 			return true
+// 		}
+// 		mp[head] = 0
+// 		head = head.Next
+// 	}
+// 	return false
+// }
 func hasCycle(head *ListNode) bool {
-	mp := make(map[*ListNode]int)
-	for head != nil {
-		if _, ok := mp[head]; ok {
+	if head == nil {
+		return false
+	}
+	slow, fast := head, head.Next
+	for fast != nil && fast.Next != nil {
+		if slow == fast {
 			return true
 		}
-		mp[head] = 0
-		head = head.Next
+		slow, fast = slow.Next, fast.Next.Next
 	}
 	return false
 }
