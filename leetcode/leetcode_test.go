@@ -21,7 +21,5 @@ var tree = &TreeNode{
 }
 
 func TestLeetcode(t *testing.T) {
-	t.Log(Serialize(tree))
-	tn := Deserialize(Serialize(tree))
-	t.Log(Serialize(tn))
+	t.Log(isPalindrome("aa"))
 }

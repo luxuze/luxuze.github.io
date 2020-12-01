@@ -12,7 +12,7 @@ import "math"
  */
 
 // @lc code=start
-func isPalindrome(x int) bool {
+func lc9isPalindrome(x int) bool {
 	if math.Signbit(float64(x)) {
 		return false
 	}
