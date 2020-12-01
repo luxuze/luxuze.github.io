@@ -21,5 +21,5 @@ var tree = &TreeNode{
 }
 
 func TestLeetcode(t *testing.T) {
-	t.Log(isPalindrome("aa"))
+	t.Log(isPowerOfTwo(5))
 }
