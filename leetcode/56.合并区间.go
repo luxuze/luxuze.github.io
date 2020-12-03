@@ -52,7 +52,7 @@ import (
  */
 
 // @lc code=start
-func merge(intervals [][]int) (ans [][]int) {
+func mergeIntervals(intervals [][]int) (ans [][]int) {
 	sort.SliceStable(
 		intervals,
 		func(i, j int) bool {
