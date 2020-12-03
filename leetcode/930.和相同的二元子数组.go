@@ -56,7 +56,6 @@ func numSubarraysWithSum(A []int, S int) (answer int) {
 				answer++
 			}
 		}
-
 	}
 	return
 }
