@@ -9,7 +9,9 @@ var (
 )
 
 func TestLeetcode(t *testing.T) {
-	answer := kthSmallest([][]int{{1, 3, 5}, {6, 7, 12}, {11, 14, 14}}, 3)
+	merge(
+		[]int{4, 0, 0, 0, 0, 0}, 1,
+		[]int{1, 2, 3, 5, 6}, 5)
 
-	t.Log(answer)
+	// t.Log(answer)
 }
