@@ -28,7 +28,9 @@
 
 ### Redis
 
+- [数据类型](./markdown/database/redis/struct.md)
 - [Redis Sentinel (哨兵)](./markdown/database/redis/sentinel.md)
+- [缓存](./markdown/database/redis/cache.md)
 
 ### MySQL
 
