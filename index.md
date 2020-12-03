@@ -24,7 +24,7 @@
 - [JavaScript](./markdown/frontend/question-js.md)
 - [CSS](./markdown/frontend/question-css.md)
 - [UmiJS 可插拔的企业级 react 应用框架](https://umijs.org/zh/)
-- [轻松理解 JS 中的面向对象，顺便搞懂 prototype 和**proto**](./markdown/frontend/proto.md)
+- [prototype & proto](./markdown/frontend/proto.md)
 
 ## DataBase
 
