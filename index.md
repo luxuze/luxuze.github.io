@@ -10,6 +10,7 @@
 ## Golang
 
 - [基础](./markdown/golang/grammar.md)
+- [原子操作](./markdown/golang/atomic.md)
 - [Gin](./markdown/golang/gin.md)
 - [http服务优雅重启](./markdown/golang/restart.md)
 
