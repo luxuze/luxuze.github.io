@@ -2,6 +2,10 @@
 
 **[搬砖经验总结](./markdown/graceful.md)**
 
+## Algorithms
+
+- [leetcode题型](./markdown/algorithm/data_structure.md)
+
 ## Micro Service
 
 - [分布式事务六种解决方案](./markdown/micro/6tx.md)
