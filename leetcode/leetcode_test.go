@@ -5,10 +5,10 @@ import (
 )
 
 var (
-	tree = Deserialize("1,null,2,3,null")
+	tree = Deserialize("3,1,2")
 )
 
 func TestT(t *testing.T) {
-	answer := preorderTraversal(tree)
+	answer := postorderTraversal(tree)
 	t.Log(answer)
 }
