@@ -6,9 +6,13 @@ import (
 
 var (
 	tree = Deserialize("3,1,2")
+	ln   = &ListNode{Val: 4, Next: &ListNode{Val: 2, Next: &ListNode{Val: 1, Next: &ListNode{Val: 3}}}}
 )
 
 func TestT(t *testing.T) {
-	answer := Serialize(constructFromPrePost([]int{1, 2, 4, 5, 3, 6, 7}, []int{4, 5, 2, 6, 7, 3, 1}))
-	t.Log(answer)
+	answer := insertionSortList(ln)
+	t.Log(answer.Val)
+	t.Log(answer.Next.Val)
+	t.Log(answer.Next.Next.Val)
+	t.Log(answer.Next.Next.Next.Val)
 }
