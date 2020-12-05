@@ -42,6 +42,7 @@
 - [事务隔离级别](./markdown/database/mysql/transaction.md)
 - [索引](./markdown/database/mysql/index.md)
 - [分库分表数据切分](./markdown/database/mysql/sharding.md)
+- [范式](./markdown/database/mysql/nf.md)
 
 ### PostgreSQL
 
