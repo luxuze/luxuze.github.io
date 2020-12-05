@@ -37,10 +37,11 @@
 
 ### MySQL
 
-- [mysql 主从](./markdown/database/mysql/msater_slave.md)
-- [MySQL中常用存储引擎](./markdown/database/mysql/engine.md)
+- [主从](./markdown/database/mysql/msater_slave.md)
+- [存储引擎](./markdown/database/mysql/engine.md)
 - [事务隔离级别](./markdown/database/mysql/transaction.md)
-- [Mysql 索引](./markdown/database/mysql/index.md)
+- [索引](./markdown/database/mysql/index.md)
+- [分库分表数据切分](./markdown/database/mysql/sharding.md)
 
 ### PostgreSQL
 
