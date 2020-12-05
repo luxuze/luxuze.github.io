@@ -16,7 +16,7 @@
 
 ## Python
 
-- [一站式思维导图](./markdown/python/py3.png)
+- [一站式思维导图](./markdown/python/py3.md)
 - [Mac 下保持程序不被干掉](./markdown/python/mac_keep_aliving_python_process.md)
 
 ## Frontend
@@ -43,8 +43,6 @@
 - [索引](./markdown/database/mysql/index.md)
 - [分库分表数据切分](./markdown/database/mysql/sharding.md)
 - [范式](./markdown/database/mysql/nf.md)
-
-### PostgreSQL
 
 ### MongoDB
 
