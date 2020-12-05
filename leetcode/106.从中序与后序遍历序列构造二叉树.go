@@ -48,7 +48,7 @@ package leetcode
  *     Right *TreeNode
  * }
  */
-func buildTree(inorder []int, postorder []int) *TreeNode {
+func lc106BuildTree(inorder []int, postorder []int) *TreeNode {
 	// inorder [[left...], root, [right...]]
 	// postorder [[left...], [right...], root]
 	if len(inorder) == 0 || len(postorder) == 0 {
@@ -61,8 +61,8 @@ func buildTree(inorder []int, postorder []int) *TreeNode {
 			break
 		}
 	}
-	root.Left = buildTree(inorder[:rootIndex], postorder[:rootIndex])
-	root.Right = buildTree(inorder[rootIndex+1:], postorder[rootIndex:len(postorder)-1])
+	root.Left = lc106BuildTree(inorder[:rootIndex], postorder[:rootIndex])
+	root.Right = lc106BuildTree(inorder[rootIndex+1:], postorder[rootIndex:len(postorder)-1])
 	return root
 }
 
