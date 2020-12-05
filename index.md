@@ -61,11 +61,11 @@
 ## Micro Service
 
 - [分布式事务六种解决方案](./markdown/micro/6tx.md)
+- [Message Queue](./markdown/micro/mq.md)
 - [CAP](./markdown/micro/cap.md)
 - [ETCD - RAFT](./markdown/micro/etcd.md)
 - [Api Gateway Kong](./markdown/micro/kong.md)
 - [Prometheus & grafana](./markdown/micro/prometheus.md)
-- [KubeMQ](https://kubemq.io/quick-start/)
 
 - Go micro
 
