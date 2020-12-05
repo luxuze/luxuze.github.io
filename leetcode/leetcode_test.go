@@ -9,6 +9,6 @@ var (
 )
 
 func TestT(t *testing.T) {
-	answer := postorderTraversal(tree)
+	answer := Serialize(buildTree([]int{9, 3, 15, 20, 7}, []int{9, 15, 7, 20, 3}))
 	t.Log(answer)
 }
