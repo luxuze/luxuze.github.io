@@ -1,8 +1,6 @@
 #
 
-## 个人总结
-
-### [如何让团队的代码保持优雅](./markdown/graceful.md)
+## 搬砖经验总结(./markdown/graceful.md)
 
 ## Micro Service
 
