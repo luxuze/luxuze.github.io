@@ -1,4 +1,18 @@
-# luxuze.github.io
+#
+
+## 个人总结
+
+### [如何让团队的代码保持优雅](./markdown/graceful.md)
+
+## Micro Service
+
+- [分布式事务六种解决方案](./markdown/micro/6tx.md)
+- [Message Queue](./markdown/micro/mq.md)
+- [CAP](./markdown/micro/cap.md)
+- [ETCD - RAFT](./markdown/micro/etcd.md)
+- [Api Gateway Kong](./markdown/micro/kong.md)
+- [Prometheus & grafana](./markdown/micro/prometheus.md)
+- [go-micro sa config](./markdown/micro/go-micro-sa.md)
 
 ## NetWork
 
@@ -55,13 +69,3 @@
 
 - [crontab](./markdown/linux/crontab.md)
 - [进程间通信IPC](./markdown/linux/ipc.md)
-
-## Micro Service
-
-- [分布式事务六种解决方案](./markdown/micro/6tx.md)
-- [Message Queue](./markdown/micro/mq.md)
-- [CAP](./markdown/micro/cap.md)
-- [ETCD - RAFT](./markdown/micro/etcd.md)
-- [Api Gateway Kong](./markdown/micro/kong.md)
-- [Prometheus & grafana](./markdown/micro/prometheus.md)
-- [go-micro sa config](./markdown/micro/go-micro-sa.md)
