@@ -5,9 +5,10 @@ import (
 )
 
 var (
-	tree = Deserialize("71,62,84,14,null,null,88,null,null,null,null")
+	tree = Deserialize("3,9,20,null,null,15,7")
 )
 
 func TestLeetcode(t *testing.T) {
-	// t.Log(answer)
+	answer := levelOrderBottom(nil)
+	t.Log(answer)
 }
