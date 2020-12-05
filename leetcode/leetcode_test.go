@@ -5,10 +5,10 @@ import (
 )
 
 var (
-	tree = Deserialize("3,9,20,null,null,15,7")
+	tree = Deserialize("1,null,2,3,null")
 )
 
-func TestLeetcode(t *testing.T) {
-	answer := levelOrderBottom(nil)
+func TestT(t *testing.T) {
+	answer := preorderTraversal(tree)
 	t.Log(answer)
 }
