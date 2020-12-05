@@ -64,13 +64,4 @@
 - [ETCD - RAFT](./markdown/micro/etcd.md)
 - [Api Gateway Kong](./markdown/micro/kong.md)
 - [Prometheus & grafana](./markdown/micro/prometheus.md)
-
-- Go micro
-
-  - [Service Account kubernetes rbac config](./markdown/micro/go-micro-sa.md)
-
-## Cloud Service
-
-### Aliyun
-
-- [日志服务](./markdown/cloud/aliyun.md)
+- [go-micro sa config](./markdown/micro/go-micro-sa.md)
