@@ -10,6 +10,7 @@ var (
 )
 
 func TestT(t *testing.T) {
-	answer := minSubArrayLen(2, []int{2, 3, 1, 2, 4, 3})
+	answer := []int{1, 2, 3, 4, 5, 6, 7}
+	rotate(answer, 3)
 	t.Log(answer)
 }
