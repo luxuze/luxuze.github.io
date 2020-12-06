@@ -10,9 +10,6 @@ var (
 )
 
 func TestT(t *testing.T) {
-	answer := insertionSortList(ln)
-	t.Log(answer.Val)
-	t.Log(answer.Next.Val)
-	t.Log(answer.Next.Next.Val)
-	t.Log(answer.Next.Next.Next.Val)
+	answer := minSubArrayLen(2, []int{2, 3, 1, 2, 4, 3})
+	t.Log(answer)
 }
