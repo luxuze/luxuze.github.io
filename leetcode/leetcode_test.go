@@ -13,3 +13,26 @@ func TestT(t *testing.T) {
 	answer := uniquePathsWithObstacles([][]int{{0, 0}, {1, 1}, {0, 0}})
 	t.Log(answer)
 }
+
+func TestTmp(t *testing.T) {
+	var answer int
+	var max = func(a, b int) int {
+		if a > b {
+			return a
+		}
+		return b
+	}
+	var s string = "abbcd"
+	for i := range s {
+		mp := make(map[byte]int, len(s))
+		for j := i; j < len(s); j++ {
+			if _, ok := mp[s[j]]; !ok {
+				mp[s[j]] = 1
+				answer = max(answer, j-i+1)
+				continue
+			}
+			break
+		}
+	}
+	t.Log(answer)
+}
