@@ -10,7 +10,6 @@ var (
 )
 
 func TestT(t *testing.T) {
-	answer := []int{1, 2, 3, 4, 5, 6, 7}
-	rotate(answer, 3)
+	answer := uniquePaths(3, 3)
 	t.Log(answer)
 }
