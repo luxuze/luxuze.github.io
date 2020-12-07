@@ -10,6 +10,6 @@ var (
 )
 
 func TestT(t *testing.T) {
-	answer := uniquePaths(3, 3)
+	answer := uniquePathsWithObstacles([][]int{{0, 0}, {1, 1}, {0, 0}})
 	t.Log(answer)
 }
