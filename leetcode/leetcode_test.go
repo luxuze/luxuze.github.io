@@ -10,8 +10,8 @@ var (
 )
 
 func TestT(t *testing.T) {
-	answer := deleteDuplicates(ln)
-	t.Log(answer.Val)
+	answer := findMin([]int{4, 5, 6, 7, 0, 1, 2})
+	t.Log(answer)
 }
 
 func TestTmp(t *testing.T) {
