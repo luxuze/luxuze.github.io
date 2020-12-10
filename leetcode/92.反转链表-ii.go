@@ -1,5 +1,8 @@
 package leetcode
 
+// 44/44 cases passed (0 ms)
+// Your runtime beats 100 % of golang submissions
+// Your memory usage beats 96.01 % of golang submissions (2.1 MB)
 /*
  * @lc app=leetcode.cn id=92 lang=golang
  *
@@ -39,25 +42,27 @@ func reverseBetween(head *ListNode, m int, n int) *ListNode {
 	if head == nil {
 		return nil
 	}
-	var prev *ListNode
-	prev, tail := nil, head
-	for m > 0 {
-		prev = tail
-		tail = tail.Next
+	var tmpPrev *ListNode
+	current := head
+	for m > 1 {
+		tmpPrev = current
+		current = current.Next
 		m--
 		n--
 	}
-	current := tail
-
-	for n > 0 {
+	truePrev, tail := tmpPrev, current
+	for ; n > 0; n-- {
 		next := current.Next
-		current.Next = prev
-		prev = current
+		current.Next = tmpPrev
+		tmpPrev = current
 		current = next
-		n--
+	}
+	if truePrev == nil {
+		head = tmpPrev
+	} else {
+		truePrev.Next = tmpPrev
 	}
 	tail.Next = current
-
 	return head
 }
 
