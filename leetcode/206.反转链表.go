@@ -1,5 +1,8 @@
 package leetcode
 
+// 27/27 cases passed (0 ms)
+// Your runtime beats 100 % of golang submissions
+// Your memory usage beats 98.06 % of golang submissions (2.5 MB)
 /*
  * @lc app=leetcode.cn id=206 lang=golang
  *
@@ -35,14 +38,24 @@ package leetcode
  *     Next *ListNode
  * }
  */
+// func reverseList(head *ListNode) *ListNode {
+// 	if head == nil || head.Next == nil {
+// 		return head
+// 	}
+// 	newHead := reverseList(head)
+// 	head.Next.Next = head.Next
+// 	head.Next = nil
+// 	return newHead
+// }
 func reverseList(head *ListNode) *ListNode {
-	if head == nil || head.Next == nil {
-		return head
+	var current, next *ListNode = nil, head
+	for next != nil {
+		newNext := next.Next
+		next.Next = current
+		current = next
+		next = newNext
 	}
-	newHead := reverseList(head)
-	head.Next.Next = head.Next
-	head.Next = nil
-	return newHead
+	return current
 }
 
 // @lc code=end
