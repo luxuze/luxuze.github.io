@@ -6,11 +6,11 @@ import (
 
 var (
 	tree = Deserialize("3,1,2")
-	ln   = &ListNode{Val: 1, Next: &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 3}}}}}
+	ln   = &ListNode{Val: 1, Next: &ListNode{Val: 2, Next: &ListNode{Val: 3, Next: &ListNode{Val: 4, Next: &ListNode{Val: 5}}}}}
 )
 
 func TestT(t *testing.T) {
-	answer := findMin([]int{4, 5, 6, 7, 0, 1, 2})
+	answer := reverseBetween(ln, 2, 4)
 	t.Log(answer)
 }
 
