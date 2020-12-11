@@ -11,7 +11,7 @@ var (
 )
 
 func TestT(t *testing.T) {
-	answer := reverseList(ln)
+	answer := reverseBetween(ln, 2, 4)
 	t.Log(answer)
 	t.Log(answer.Next)
 	t.Log(answer.Next.Next)

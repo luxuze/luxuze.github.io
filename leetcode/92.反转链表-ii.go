@@ -40,29 +40,30 @@ package leetcode
  */
 func reverseBetween(head *ListNode, m int, n int) *ListNode {
 	if head == nil {
-		return nil
+		return head
 	}
-	var tmpPrev *ListNode
-	current := head
+	var truePrev *ListNode
+	middleTail := head
 	for m > 1 {
-		tmpPrev = current
-		current = current.Next
+		truePrev = middleTail
+		middleTail = middleTail.Next
 		m--
 		n--
 	}
-	truePrev, tail := tmpPrev, current
+	tmpPrev := truePrev
+	current := middleTail
 	for ; n > 0; n-- {
 		next := current.Next
 		current.Next = tmpPrev
 		tmpPrev = current
 		current = next
 	}
+	middleTail.Next = current
 	if truePrev == nil {
 		head = tmpPrev
 	} else {
 		truePrev.Next = tmpPrev
 	}
-	tail.Next = current
 	return head
 }
 
