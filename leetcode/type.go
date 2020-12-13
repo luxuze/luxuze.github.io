@@ -6,6 +6,11 @@ import (
 	"strings"
 )
 
+var (
+	treeNode *TreeNode
+	listNode *ListNode
+)
+
 // ListNode 链表节点
 type ListNode struct {
 	Val  int
@@ -25,8 +30,33 @@ type Node struct {
 	Children []*Node
 }
 
-// Serialize Serializes a tree to a single string.
-func Serialize(root *TreeNode) string {
+// Serialize Serializes a list node to a single string.
+func (*ListNode) Serialize(ln *ListNode) string {
+	var s []string
+	for ; ln != nil; ln = ln.Next {
+		s = append(s, strconv.Itoa(ln.Val))
+	}
+	return strings.Join(s, ",")
+}
+
+// Deserialize Deserialize a single string to a list node.
+func (*ListNode) Deserialize(s string) *ListNode {
+	if !(len(s) > 0) {
+		return nil
+	}
+	ln := &ListNode{}
+	cursor := ln
+	for _, i := range strings.Split(s, ",") {
+		val, _ := strconv.Atoi(i)
+		cursor.Next = &ListNode{Val: val}
+		cursor = cursor.Next
+	}
+	fmt.Println(111, ln.Next)
+	return ln.Next
+}
+
+// Serialize Serialize a tree to a single string.
+func (*TreeNode) Serialize(root *TreeNode) string {
 	var (
 		answer string
 		layers = []*TreeNode{root}
@@ -49,7 +79,7 @@ func Serialize(root *TreeNode) string {
 }
 
 // Deserialize Deserialize your encoded data to tree.
-func Deserialize(data string) *TreeNode {
+func (*TreeNode) Deserialize(data string) *TreeNode {
 	var (
 		atoiTreeNode = func(s string) *TreeNode {
 			if s == "null" {
