@@ -26,6 +26,7 @@
 ## Golang
 
 - [基础](./markdown/golang/grammar.md)
+- [基本数据类型](./markdown/golang/data_struct.md)
 - [原子操作](./markdown/golang/atomic.md)
 - [Gin](./markdown/golang/gin.md)
 - [http服务优雅重启](./markdown/golang/restart.md)
