@@ -13,7 +13,7 @@
 
 - **未提交读(Read Uncommitted)**：事务中的修改即使没有提交，对其他事务也是可见的。
 - **提交读(Read Committed)**：只能读取到已经提交的数据。Oracle等多数数据库默认都是该级别 (不重复读)
-- **可重复读(Repeated Read)**：保证在同一个事务中多次读取同样数据的结果是一样的。
+- **可重复读(Repeated Read)**：保证在同一个事务中多次读取同样数据的结果是一样的。(mysql innodb默认)
 - **串行读(Serializable)**：强制事务串行执行，每次读都需要获得表级共享锁，读写相互都会阻塞。
 
 | 隔离级别                 | 脏读Dirty Read | 不可重复读 NonRepeatable Read |  幻读 Phantom Read |
