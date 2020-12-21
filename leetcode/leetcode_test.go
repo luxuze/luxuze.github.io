@@ -10,5 +10,5 @@ var (
 )
 
 func TestT(t *testing.T) {
-	t.Log(combinationSum([]int{2, 3, 6, 7}, 7))
+	t.Log(threeSum([]int{-1, 0, 1, 2, -1, -4}))
 }
