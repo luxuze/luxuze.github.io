@@ -51,7 +51,6 @@ func (*ListNode) Deserialize(s string) *ListNode {
 		cursor.Next = &ListNode{Val: val}
 		cursor = cursor.Next
 	}
-	fmt.Println(111, ln.Next)
 	return ln.Next
 }
 

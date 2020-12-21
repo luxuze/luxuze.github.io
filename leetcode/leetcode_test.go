@@ -10,5 +10,5 @@ var (
 )
 
 func TestT(t *testing.T) {
-	t.Log(listNode.Serialize(ln))
+	t.Log(combinationSum([]int{2, 3, 6, 7}, 7))
 }
