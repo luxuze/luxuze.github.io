@@ -60,6 +60,7 @@
 - [索引](./markdown/database/mysql/index.md)
 - [分库分表数据切分](./markdown/database/mysql/sharding.md)
 - [范式](./markdown/database/mysql/nf.md)
+- [开发原则](./markdown/database/mysql/regulation.md)
 
 ### MongoDB
 
