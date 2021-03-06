@@ -10,5 +10,5 @@ var (
 )
 
 func TestT(t *testing.T) {
-	t.Log(romanToInt("IV"))
+	t.Log(permute([]int{1, 2, 3, 4}))
 }
