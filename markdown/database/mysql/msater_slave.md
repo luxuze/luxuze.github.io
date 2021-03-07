@@ -1,4 +1,4 @@
-# MySQL主从复制
+# MySQL 主从复制
 
 ## 线程
 
@@ -22,41 +22,41 @@
 ## 1. master node
 
 1. 开启二进制日志 binlog
-2. 配置唯一的server-id
-3. 获得master二进制文件名及位置
-4. 创建一个用于slave和master通信的用户账号
+2. 配置唯一的 server-id
+3. 获得 master 二进制文件名及位置
+4. 创建一个用于 slave 和 master 通信的用户账号
 
 5. /etc/my.cnf
 
-    ```ini
-    [mysqld]
-    # 开启二进制日志
-    log-bin=mysql-bin
-    # 设置server-id，建议使用ip最后3位
-    server-id=140
-    ```
+   ```ini
+   [mysqld]
+   # 开启二进制日志
+   log-bin=mysql-bin
+   # 设置server-id，建议使用ip最后3位
+   server-id=140
+   ```
 
 ## 2. slave node
 
-1. 配置唯一的server-id
-2. 使用master分配的用户账号读取master二进制日志
-3. 启动slave服务
+1. 配置唯一的 server-id
+2. 使用 master 分配的用户账号读取 master 二进制日志
+3. 启动 slave 服务
 
 4. /etc/my.cnf
 
-    ```ini
-    #开启中继日志
-    relay-log=mysql-relay
-    #设置server-id，建议使用ip最后3位
-    server-id=141
-    ```
+   ```ini
+   #开启中继日志
+   relay-log=mysql-relay
+   #设置server-id，建议使用ip最后3位
+   server-id=141
+   ```
 
-## 3.重启mysql服务
+## 3.重启 mysql 服务
 
-* systemctl restart mysqld.service
-* docker restart ${container id}
+- systemctl restart mysqld.service
+- docker restart ${container id}
 
-## 4. 在主机上建立账户并授权slave
+## 4. 在主机上建立账户并授权 slave
 
 ```sql
 GRANT REPLICATION SLAVE ON *.* TO 'mysql141'@'192.168.131.141' IDENTIFIED BY 'mysql141';
@@ -89,6 +89,6 @@ SHOW SLAVE STATUS\G
 
 ## 读写分离中间件
 
-* Maxsacl
-* Mycat
-* ...
+- Maxsacl
+- Mycat
+- ...

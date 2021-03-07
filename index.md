@@ -4,7 +4,7 @@
 
 ## Algorithms
 
-- [leetcode题型](./markdown/algorithm/data_structure.md)
+- [leetcode 题型](./markdown/algorithm/data_structure.md)
 
 ## Micro Service
 
@@ -29,7 +29,7 @@
 - [基本数据类型](./markdown/golang/data_struct.md)
 - [原子操作](./markdown/golang/atomic.md)
 - [Gin](./markdown/golang/gin.md)
-- [http服务优雅重启](./markdown/golang/restart.md)
+- [http 服务优雅重启](./markdown/golang/restart.md)
 
 ## Python
 
@@ -72,4 +72,4 @@
 ## Linux
 
 - [crontab](./markdown/linux/crontab.md)
-- [进程间通信IPC](./markdown/linux/ipc.md)
+- [进程间通信 IPC](./markdown/linux/ipc.md)
