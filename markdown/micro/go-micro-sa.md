@@ -1,4 +1,6 @@
-```yml
+# go-micro-sa
+
+```text
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -34,3 +36,4 @@ subjects:
     name: sa-micro-services
     namespace: ns-micro
 ```
+

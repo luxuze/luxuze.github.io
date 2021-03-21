@@ -1,7 +1,6 @@
 # HTTP status codes as registered with IANA
 
-[Refrence](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
-[Go Doc](https://golang.org/pkg/net/http/)
+[Refrence](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml) [Go Doc](https://golang.org/pkg/net/http/)
 
 ```go
 const (
@@ -74,3 +73,4 @@ const (
     StatusNetworkAuthenticationRequired = 511 // RFC 6585, 6
 )
 ```
+

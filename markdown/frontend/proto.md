@@ -1,6 +1,6 @@
-# 轻松理解 JS 中的面向对象，顺便搞懂 prototype 和**proto**
+# 轻松理解 JS 中的面向对象，顺便搞懂 prototype 和proto
 
-这篇文章主要讲一下 JS 中面向对象以及 **proto**，ptototype 和 constructor，这几个概念都是相关的，所以一起讲了。在讲这个之前我们先来说说类，了解面向对象的朋友应该都知道，如果我要定义一个通用的类型我可以使用类(class)。比如在 java 中我们可以这样定义一个类：
+这篇文章主要讲一下 JS 中面向对象以及 **proto**，ptototype 和 constructor，这几个概念都是相关的，所以一起讲了。在讲这个之前我们先来说说类，了解面向对象的朋友应该都知道，如果我要定义一个通用的类型我可以使用类\(class\)。比如在 java 中我们可以这样定义一个类：
 
 ```javascript
 public class Puppy{
@@ -14,15 +14,13 @@ public class Puppy{
       System.out.println("汪汪汪");
     }
 }
-
 ```
 
-上述代码我们定义了一个 Puppy 类，这个类有一个属性是 puppyAge，也就是小狗的年龄，然后有一个构造函数 Puppy()，这个构造函数接收一个参数，可以设置小狗的年龄，另外还有一个说话的函数 say。这是一个通用的类，当我们需要一个两岁的小狗实例是直接这样写，这个实例同时具有父类的方法:
+上述代码我们定义了一个 Puppy 类，这个类有一个属性是 puppyAge，也就是小狗的年龄，然后有一个构造函数 Puppy\(\)，这个构造函数接收一个参数，可以设置小狗的年龄，另外还有一个说话的函数 say。这是一个通用的类，当我们需要一个两岁的小狗实例是直接这样写，这个实例同时具有父类的方法:
 
 ```javascript
 Puppy myPuppy = new Puppy( 2 );
 myPuppy.say();     // 汪汪汪
-
 ```
 
 但是早期的 JS 没有 class 关键字啊（以下说 JS 没有 class 关键字都是指 ES6 之前的 JS，主要帮助大家理解概念），JS 为了支持面向对象，使用了一种比较曲折的方式，这也是导致大家迷惑的地方，其实我们将这种方式跟一般的面向对象类比起来就很清晰了。下面我们来看看 JS 为了支持面向对象需要解决哪些问题，都用了什么曲折的方式来解决。
@@ -78,8 +76,7 @@ myPuppy.say(); // 汪汪汪
 
 ## 实例方法查找用**proto**
 
-那 myPuppy 怎么就能够调用 say 方法了呢，我们把他打印出来看下，这个对象上并没有 say 啊，这是从哪里来的呢？
-![img](https://user-gold-cdn.xitu.io/2020/2/22/1706c01f3adbb074?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+那 myPuppy 怎么就能够调用 say 方法了呢，我们把他打印出来看下，这个对象上并没有 say 啊，这是从哪里来的呢？ ![img](https://user-gold-cdn.xitu.io/2020/2/22/1706c01f3adbb074?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 这就该**proto**上场了，当你访问一个对象上没有的属性时，比如 myPuppy.say，对象会去**proto**查找。**proto**的值就等于父类的 prototype, myPuppy.**proto**指向了 Puppy.prototype。
 
@@ -118,8 +115,7 @@ console.log(myPuppy2.puppyAge); // 输出是2
 
 ![img](https://user-gold-cdn.xitu.io/2020/2/22/1706c01f3e8d76dc?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
-![img]()
-上面我们其实已经说清楚了 prototype，**proto**，constructor 几者之间的关系，下面画一张图来更直观的看下：
+ 上面我们其实已经说清楚了 prototype，**proto**，constructor 几者之间的关系，下面画一张图来更直观的看下：
 
 ![img](https://user-gold-cdn.xitu.io/2020/2/22/1706c01f7fa88f7d?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
@@ -136,7 +132,7 @@ Puppy.statciFunc = function () {
 Puppy.statciFunc(); // 直接通过类名调用
 ```
 
-静态方法和实例方法最主要的区别就是实例方法可以访问到实例，可以对实例进行操作，而静态方法一般用于跟实例无关的操作。这两种方法在 jQuery 中有大量应用，在 jQuery 中$(selector)其实拿到的就是实例对象，通过$(selector)进行操作的方法就是实例方法。比如$(selector).append()，这会往这个实例DOM添加新元素，他需要这个DOM实例才知道怎么操作，将append作为一个实例方法，他里面的this就会指向这个实例，就可以通过this操作DOM实例。那什么方法适合作为静态方法呢？比如$.ajax，这里的 ajax 跟 DOM 实例没关系，不需要这个 this，可以直接挂载在$上作为静态方法。关于 jQuery 实例方法和静态方法更详细的介绍，可以看这里。
+静态方法和实例方法最主要的区别就是实例方法可以访问到实例，可以对实例进行操作，而静态方法一般用于跟实例无关的操作。这两种方法在 jQuery 中有大量应用，在 jQuery 中$\(selector\)其实拿到的就是实例对象，通过$\(selector\)进行操作的方法就是实例方法。比如$\(selector\).append\(\)，这会往这个实例DOM添加新元素，他需要这个DOM实例才知道怎么操作，将append作为一个实例方法，他里面的this就会指向这个实例，就可以通过this操作DOM实例。那什么方法适合作为静态方法呢？比如$.ajax，这里的 ajax 跟 DOM 实例没关系，不需要这个 this，可以直接挂载在$上作为静态方法。关于 jQuery 实例方法和静态方法更详细的介绍，可以看这里。
 
 ## 继承
 
@@ -309,16 +305,18 @@ console.log(Puppy.statciFunc()); // 我是静态方法，this拿不到实例对�
 ## 总结
 
 1. 最后来个总结，其实前面小节的标题就是核心了，我们再来总结下：
-1. JS 中的函数可以作为函数使用，也可以作为类使用
-1. 作为类使用的函数实例化时需要使用 new
-1. 为了让函数具有类的功能，函数都具有 prototype 属性。
-1. 为了让实例化出来的对象能够访问到 prototype 上的属性和方法，实例对象的**proto**指向了类的 prototype。所以 prototype 是函数的属性，不是对象的。对象拥有的是**proto**，是用来查找 prototype 的。
-1. prototype.constructor 指向的是构造函数，也就是类函数本身。改变这个指针并不能改变构造函数。
-1. 对象本身并没有 constructor 属性，你访问到的是原型链上的 prototype.constructor。
-1. 函数本身也是对象，也具有**proto**，他指向的是 JS 内置对象 Function 的原型 Function.prototype。所以你才能调用 func.call,func.apply 这些方法，你调用的其实是 Function.prototype.call 和 Function.prototype.apply。
-1. prototype 本身也是对象，所以他也有**proto**，指向了他父级的 prototype。**proto**和 prototype 的这种链式指向构成了 JS 的原型链。原型链的最终指向是 Object 的原型。Object 上面原型链是 null，即 Object.prototype.**proto** === null。
-1. 另外评论区有朋友提到：Function.**proto** === Function.prototype。这是因为 JS 中所有函数的原型都是 Function.prototype，也就是说所有函数都是 Function 的实例。Function 本身也是可以作为函数使用的----Function()，所以他也是 Function 的一个实例。类似的还有 Object，Array 等，他们也可以作为函数使用:Object(), Array()。所以他们本身的原型也是 Function.prototype，即 Object.**proto** === Function.prototype。换句话说，这些可以 new 的内置对象其实都是一个类，就像我们的 Puppy 类一样。
-1. ES6 的 class 其实是函数类的一种语法糖，书写起来更清晰，但原理是一样的。
-   再来看一下完整图：
+2. JS 中的函数可以作为函数使用，也可以作为类使用
+3. 作为类使用的函数实例化时需要使用 new
+4. 为了让函数具有类的功能，函数都具有 prototype 属性。
+5. 为了让实例化出来的对象能够访问到 prototype 上的属性和方法，实例对象的**proto**指向了类的 prototype。所以 prototype 是函数的属性，不是对象的。对象拥有的是**proto**，是用来查找 prototype 的。
+6. prototype.constructor 指向的是构造函数，也就是类函数本身。改变这个指针并不能改变构造函数。
+7. 对象本身并没有 constructor 属性，你访问到的是原型链上的 prototype.constructor。
+8. 函数本身也是对象，也具有**proto**，他指向的是 JS 内置对象 Function 的原型 Function.prototype。所以你才能调用 func.call,func.apply 这些方法，你调用的其实是 Function.prototype.call 和 Function.prototype.apply。
+9. prototype 本身也是对象，所以他也有**proto**，指向了他父级的 prototype。**proto**和 prototype 的这种链式指向构成了 JS 的原型链。原型链的最终指向是 Object 的原型。Object 上面原型链是 null，即 Object.prototype.**proto** === null。
+10. 另外评论区有朋友提到：Function.**proto** === Function.prototype。这是因为 JS 中所有函数的原型都是 Function.prototype，也就是说所有函数都是 Function 的实例。Function 本身也是可以作为函数使用的----Function\(\)，所以他也是 Function 的一个实例。类似的还有 Object，Array 等，他们也可以作为函数使用:Object\(\), Array\(\)。所以他们本身的原型也是 Function.prototype，即 Object.**proto** === Function.prototype。换句话说，这些可以 new 的内置对象其实都是一个类，就像我们的 Puppy 类一样。
+11. ES6 的 class 其实是函数类的一种语法糖，书写起来更清晰，但原理是一样的。
+
+    再来看一下完整图：
 
 ![img](https://user-gold-cdn.xitu.io/2020/2/22/1706c01f82dfa258?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+
