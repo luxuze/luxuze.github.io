@@ -18,4 +18,3 @@ func SomeHandler(c *gin.Context) {
   }
 }
 ```
-

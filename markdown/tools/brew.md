@@ -3,11 +3,11 @@
 对于 homebrew，需要替换的是 4 个模块的镜像：
 
 1. Homebrew
-2. Homebrew Core
-3. Homebrew-bottles
-4. Homebrew Cask
+1. Homebrew Core
+1. Homebrew-bottles
+1. Homebrew Cask
 
-```bash
+```sh
 # USTC（中科大镜像）
 # 替换 Homebrew
 git -C "$(brew --repo)" remote set-url origin https://mirrors.ustc.edu.cn/brew.git
@@ -27,4 +27,3 @@ source ~/.bash_profile
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
 source ~/.zshrc
 ```
-

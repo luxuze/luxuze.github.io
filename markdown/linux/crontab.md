@@ -4,7 +4,7 @@
 
 ## Syntax
 
-```bash
+```sh
 ┌───────────── minute (0 - 59)
 │ ┌───────────── hour (0 - 23)
 │ │ ┌───────────── day of the month (1 - 31)
@@ -18,64 +18,63 @@
 
 ## Expression
 
-| Field | Required | Allowed values | Allowed special characters | Remarks |
-| :--- | :--- | :--- | :--- | :--- |
-| Minutes | Yes | 0-59 | \* , - |  |
-| Hours | Yes | 0-23 | \* , - |  |
-| Day of month | Yes | 1-31 | \* , - ? L W ? | L W only in some implementations |
-| Month | Yes | 1-12 or JAN-DEC | \* , - |  |
-| Day of week | Yes | 0-6 or SUN-SAT | \* , - ? L \# | ? L \# ? L \# only in some implementations |
-| Year | No | 1970-2099 | \* , - | This field is not supported in standard/default implementations. |
+| Field        | Required | Allowed values  | Allowed special characters | Remarks                                                          |
+| ------------ | -------- | --------------- | -------------------------- | ---------------------------------------------------------------- |
+| Minutes      | Yes      | 0-59            | \* , -                     |                                                                  |
+| Hours        | Yes      | 0-23            | \* , -                     |
+| Day of month | Yes      | 1-31            | \* , - ? L W ?             | L W only in some implementations                                 |
+| Month        | Yes      | 1-12 or JAN-DEC | \* , -                     |
+| Day of week  | Yes      | 0-6 or SUN-SAT  | \* , - ? L #               | ? L # ? L # only in some implementations                         |
+| Year         | No       | 1970-2099       | \* , -                     | This field is not supported in standard/default implementations. |
 
-* Comma \( , \)
+- Comma ( , )
 
-  Commas are used to separate items of a list. For example, using "MON,WED,FRI" in the 5th field \(day of week\) means Mondays, Wednesdays and Fridays
+  Commas are used to separate items of a list. For example, using "MON,WED,FRI" in the 5th field (day of week) means Mondays, Wednesdays and Fridays
 
-* Dash\( - \)
+- Dash( - )
 
   Dash defines ranges. For example, 2000-2010 indicates every year between 2000 and 2010, inclusive
 
-* Percent \( % \)
+- Percent ( % )
 
-  Percent-signs \(%\) in the command, unless escaped with backslash \(\), are changed into newline characters, and all data after the first % are sent to the command as standard input.
+  Percent-signs (%) in the command, unless escaped with backslash (\), are changed into newline characters, and all data after the first % are sent to the command as standard input.
 
-* Question mark \(?\)
+- Question mark (?)
 
   In some implementations, used instead of '\*' for leaving either day-of-month or day-of-week blank. Other cron implementations substitute "?" with the start-up time of the cron daemon.
 
-* Slash \(/\)
+- Slash (/)
 
-  For example, \*/5 in the minutes field indicates every 5 minutes \(see note below about frequencies\). It is shorthand for the more verbose POSIX form 5,10,15,20,25,30,35,40,45,50,55,00.
+  For example, \*/5 in the minutes field indicates every 5 minutes (see note below about frequencies). It is shorthand for the more verbose POSIX form 5,10,15,20,25,30,35,40,45,50,55,00.
 
 ## Examples
 
-* every minute
+- every minute
 
-```bash
+```sh
 * * * * *
 ```
 
-* every 5 minutes
+- every 5 minutes
 
-```bash
+```sh
 */5 * * * *
 ```
 
-* every 2 hours
+- every 2 hours
 
-```bash
+```sh
 * */2 * * *
 ```
 
-* 2am daily
+- 2am daily
 
-```bash
+```sh
 0 2 * * *
 ```
 
-* every Sunday at 5 PM
+- every Sunday at 5 PM
 
-```bash
+```sh
 0 17 * * sun
 ```
-
