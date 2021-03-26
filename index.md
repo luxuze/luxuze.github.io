@@ -9,6 +9,7 @@
 ## Micro Service
 
 - [分布式事务六种解决方案](./markdown/micro/6tx.md)
+- [异地多活](./markdown/micro/multi_live.md)
 - [Message Queue](./markdown/micro/mq.md)
 - [CAP](./markdown/micro/cap.md)
 - [ETCD - RAFT](./markdown/micro/etcd.md)
