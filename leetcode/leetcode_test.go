@@ -10,5 +10,5 @@ var (
 )
 
 func TestT(t *testing.T) {
-	t.Log(permute([]int{1, 2, 3, 4}))
+	t.Log(letterCombinations("2342"))
 }
