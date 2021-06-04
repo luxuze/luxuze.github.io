@@ -10,5 +10,7 @@ var (
 )
 
 func TestT(t *testing.T) {
-	t.Log(letterCombinations("2342"))
+	arr := []int{1, 2, 2, 3, 4, 4, 5}
+	n := removeDuplicates(arr)
+	t.Log(n, arr[:n])
 }
