@@ -10,7 +10,5 @@ var (
 )
 
 func TestT(t *testing.T) {
-	arr := []int{1, 2, 2, 3, 4, 4, 5}
-	n := removeDuplicates(arr)
-	t.Log(n, arr[:n])
+	t.Log(combinationSum2([]int{3, 1, 3, 5, 1, 1}, 8))
 }
