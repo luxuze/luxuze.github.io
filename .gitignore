@@ -4,6 +4,10 @@
 
 .DS_Store
 
+*.pyc
+
+.venv
+
 test
 
 bilibili
