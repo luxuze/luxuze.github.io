@@ -10,5 +10,5 @@ var (
 )
 
 func TestT(t *testing.T) {
-	t.Log(combinationSum2([]int{3, 1, 3, 5, 1, 1}, 8))
+	t.Log(climbStairs(44))
 }
