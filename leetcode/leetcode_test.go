@@ -10,5 +10,5 @@ var (
 )
 
 func TestT(t *testing.T) {
-	t.Log(climbStairs(44))
+	t.Log(simplifyPath("/.././a/b/c"))
 }
