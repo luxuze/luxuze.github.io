@@ -1,8 +1,8 @@
 package leetcode
 
-// 116/116 cases passed (8 ms)
-// Your runtime beats 70.81 % of golang submissions
-// Your memory usage beats 70.72 % of golang submissions (4.6 MB)
+// 116/116 cases passed (4 ms)
+// Your runtime beats 96.71 % of golang submissions
+// Your memory usage beats 100 % of golang submissions (4.6 MB)
 /*
  * @lc app=leetcode.cn id=112 lang=golang
  *
