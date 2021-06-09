@@ -62,6 +62,21 @@ package leetcode
  *     Next *ListNode
  * }
  */
+
+// 66/66 cases passed (4 ms)
+// Your runtime beats 99.36 % of golang submissions
+// Your memory usage beats 12.92 % of golang submissions (5.1 MB)
+// func removeElements(head *ListNode, val int) *ListNode {
+// 	if head == nil {
+// 		return nil
+// 	}
+// 	head.Next = removeElements(head.Next, val)
+// 	if head.Val == val {
+// 		return head.Next
+// 	}
+// 	return head
+// }
+
 func removeElements(head *ListNode, val int) *ListNode {
 	for head != nil && head.Val == val {
 		head = head.Next
