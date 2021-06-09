@@ -10,5 +10,5 @@ var (
 )
 
 func TestT(t *testing.T) {
-	t.Log(simplifyPath("/.././a/b/c"))
+	t.Log(getRow(3))
 }
