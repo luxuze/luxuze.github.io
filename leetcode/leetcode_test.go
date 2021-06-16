@@ -10,6 +10,6 @@ var (
 )
 
 func TestT(t *testing.T) {
-	l := removeElements(ln, 2)
-	t.Log(ln.Serialize(l))
+	l := []int{-10, -3, 0, 5, 9}
+	t.Log(sortedArrayToBST(l))
 }
