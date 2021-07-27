@@ -10,5 +10,5 @@ var (
 )
 
 func TestT(t *testing.T) {
-	t.Log(binaryTreePaths(tree))
+	t.Log(secondHighest("ck077"))
 }
