@@ -10,5 +10,5 @@ var (
 )
 
 func TestT(t *testing.T) {
-	t.Log(convertToTitle(701))
+	t.Log(titleToNumber("AB"))
 }
