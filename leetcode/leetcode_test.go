@@ -10,5 +10,5 @@ var (
 )
 
 func TestT(t *testing.T) {
-	t.Log(trailingZeroes(30))
+	t.Log(convertToTitle(701))
 }
