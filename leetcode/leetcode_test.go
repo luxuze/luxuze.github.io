@@ -1,7 +1,6 @@
 package leetcode
 
 import (
-	"strconv"
 	"testing"
 )
 
@@ -11,6 +10,5 @@ var (
 )
 
 func TestT(t *testing.T) {
-	num, _ := strconv.ParseUint("10010110111001001101001111110101", 2, 64)
-	t.Log(reverseBits(uint32(num)))
+	t.Log(countPrimes(5000000))
 }
