@@ -61,7 +61,7 @@ import (
 
 type Codec struct{}
 
-func Constructor() Codec {
+func BTree_Constructor() Codec {
 	return Codec{}
 }
 
