@@ -15,6 +15,7 @@
 - [ETCD - RAFT](./markdown/micro/etcd.md)
 - [Api Gateway Kong](./markdown/micro/kong.md)
 - [Prometheus & grafana](./markdown/micro/prometheus.md)
+- [PromQL](./markdown/micro/promql.md)
 - [go-micro sa config](./markdown/micro/go-micro-sa.md)
 
 ## NetWork
