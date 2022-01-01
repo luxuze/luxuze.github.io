@@ -10,5 +10,6 @@ var (
 )
 
 func TestT(t *testing.T) {
-	t.Log(countPrimes(5000000))
+	t.Log(firstUniqChar("leetcode"))
+	t.Log(firstUniqChar("lloleetcode"))
 }
