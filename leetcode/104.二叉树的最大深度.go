@@ -19,7 +19,7 @@ package leetcode
  *     Right *TreeNode
  * }
  */
-func maxDepth(root *TreeNode) int {
+func bt_maxDepth(root *TreeNode) int {
 	if root == nil {
 		return 0
 	}
