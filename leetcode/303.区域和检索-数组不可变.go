@@ -69,7 +69,7 @@ type NumArray struct {
 	nums *[]int
 }
 
-func Constructor(nums []int) NumArray {
+func NumArray_Constructor(nums []int) NumArray {
 	return NumArray{nums: &nums}
 }
 
