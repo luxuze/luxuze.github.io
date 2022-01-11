@@ -10,5 +10,5 @@ var (
 )
 
 func TestT(t *testing.T) {
-	t.Log(guessNumber(1))
+	t.Log(thirdMax([]int{3, 2, 1}))
 }
