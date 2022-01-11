@@ -82,4 +82,6 @@ func firstBadVersion(n int) int {
 
 // @lc code=end
 
-func isBadVersion(version int) bool
+func isBadVersion(version int) bool {
+	return false
+}
