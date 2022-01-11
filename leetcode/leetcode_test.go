@@ -10,5 +10,5 @@ var (
 )
 
 func TestT(t *testing.T) {
-	t.Log(summaryRanges([]int{0, 1, 2, 5, 7}))
+	t.Log(guessNumber(1))
 }
