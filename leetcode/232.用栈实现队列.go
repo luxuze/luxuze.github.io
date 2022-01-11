@@ -90,7 +90,7 @@ type MyQueue struct {
 	d []int
 }
 
-func Constructor() MyQueue {
+func MyQueue_Constructor() MyQueue {
 	mq := new(MyQueue)
 	mq.d = make([]int, 0)
 	return *mq
